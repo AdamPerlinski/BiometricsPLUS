@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:WpfApp2"
+        xmlns:local1="clr-namespace:WpfApp2"
+        Title="Biometric+" Height="1080" Width="1920" WindowState="Maximized">
+    <Window.DataContext>
+        <local1:MainViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="_File" Header="_File">
+                <MenuItem x:Name="OpenFileMenu" Header="_Open"/>
+                <MenuItem x:Name="CloseFileMenu" Header="_Close"/>
+                <MenuItem x:Name="SaveFileMenu" Header="_Save"/>
+            </MenuItem>
+            <MenuItem Header="_Database" Click="MenuItem_Click">
+                <MenuItem x:Name="DisconnectDBMenu" Header="_Disconnect From Database" IsEnabled="False"/>
+                <MenuItem x:Name="ConnectDBMenu" Header="_Connect to the Database" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem x:Name="HelpMenu" Header="_Help"/>
+            </MenuItem>
+            
+        </Menu>
+        <StackPanel></StackPanel>
+    </DockPanel>
+</Window>
