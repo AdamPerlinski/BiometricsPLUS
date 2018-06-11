@@ -7,7 +7,9 @@
     <Window.DataContext>
         <local1:MainViewModel/>
     </Window.DataContext>
-    <DockPanel>
+
+    <DockPanel RenderTransformOrigin="0.237,0.456" Margin="0,10,2,-21">
+
         <Menu DockPanel.Dock="Top">
             <MenuItem x:Name="_File" Header="_File">
                 <MenuItem x:Name="OpenFileMenu" Header="_Open"/>
@@ -21,8 +23,55 @@
             <MenuItem Header="_Help">
                 <MenuItem x:Name="HelpMenu" Header="_Help"/>
             </MenuItem>
-            
+
+
         </Menu>
-        <StackPanel></StackPanel>
+        <StackPanel Orientation="Vertical" Background="MistyRose" RenderTransformOrigin="0.243,0.389">
+            <StackPanel Orientation="Horizontal"  Height="125" HorizontalAlignment="Left" Margin="10,0,0,0" >
+                <Image Width="100" Height="100" RenderTransformOrigin="1,1" Source="Image/no-image.png" Margin="0,0,0,0"/>
+                <Button Content="...." Width="50" Height="50" Margin="0,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <TextBox TextWrapping="Wrap" Text="Firstname" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox TextWrapping="Wrap" Text="Lastname" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <TextBox TextWrapping="Wrap" Text="Street name" Width="150" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left" >
+                <TextBox TextWrapping="Wrap" Text="House" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox TextWrapping="Wrap" Text="Number" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <TextBox TextWrapping="Wrap" Text="City" Width="150" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <TextBox TextWrapping="Wrap" Text="Zip-code" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" Margin="10,0,0,0" HorizontalAlignment="Left">
+                <CheckBox Content="Male " Width="65"/>
+                <CheckBox Content="Female " Width="70"/>
+                <CheckBox Content="Transsexual " Width="100"/>
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <TextBox TextWrapping="Wrap" Text="Height" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox TextWrapping="Wrap" Text="Weight" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <TextBox TextWrapping="Wrap" Text="Height" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox TextWrapping="Wrap" Text="Weight" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
+            </StackPanel>
+            
+        </StackPanel>
+
     </DockPanel>
 </Window>
