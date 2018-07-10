@@ -3,7 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:WpfApp2"
         xmlns:local1="clr-namespace:WpfApp2"
-        Title="Biometric+" Height="1080" Width="1920" WindowState="Maximized">
+        Title="Biometric+" Height="1080" Width="1920" WindowState="Maximized" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local1:BiometricPlusDataSet x:Key="biometricPlusDataSet"/>
+        <CollectionViewSource x:Key="peopleViewSource" Source="{Binding People, Source={StaticResource biometricPlusDataSet}}"/>
+    </Window.Resources>
     <Window.DataContext>
         <local1:MainViewModel/>
     </Window.DataContext>
@@ -16,7 +20,7 @@
                 <MenuItem x:Name="CloseFileMenu" Header="_Close"/>
                 <MenuItem x:Name="SaveFileMenu" Header="_Save"/>
             </MenuItem>
-            <MenuItem Header="_Database" Click="MenuItem_Click">
+            <MenuItem Header="_Database" >
                 <MenuItem x:Name="DisconnectDBMenu" Header="_Disconnect From Database" IsEnabled="False"/>
                 <MenuItem x:Name="ConnectDBMenu" Header="_Connect to the Database" />
             </MenuItem>
@@ -26,52 +30,81 @@
 
 
         </Menu>
-        <StackPanel Orientation="Vertical" Background="MistyRose" RenderTransformOrigin="0.243,0.389">
+        <StackPanel  HorizontalAlignment="Left"  Orientation="Vertical" Background="Turquoise" RenderTransformOrigin="0.243,0.389"  Width="250" Margin="0,0,0,10">
             <StackPanel Orientation="Horizontal"  Height="125" HorizontalAlignment="Left" Margin="10,0,0,0" >
-                <Image Width="100" Height="100" RenderTransformOrigin="1,1" Source="Image/no-image.png" Margin="0,0,0,0"/>
-                <Button Content="...." Width="50" Height="50" Margin="0,0,0,0"/>
+                <Image x:Name="PersonPhoto" Width="100" Height="100" RenderTransformOrigin="1,1" Source="Image/no-image.png" Margin="0,0,0,0"/>
+                <Button x:Name="ImagePicker" Content="Load..." Width="50" Height="50" Margin="10,0,0,0"  Click="ImagePicker_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
-                <TextBox TextWrapping="Wrap" Text="Firstname" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
-                <TextBox TextWrapping="Wrap" Text="Lastname" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="fn" TextWrapping="Wrap" Text="Firstname" Width="75" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="ln" TextWrapping="Wrap" Text="Lastname" Width="75" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
-                <TextBox TextWrapping="Wrap" Text="Street name" Width="150" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="strt" TextWrapping="Wrap" Text="Street name" Width="150" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left" >
-                <TextBox TextWrapping="Wrap" Text="House" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
-                <TextBox TextWrapping="Wrap" Text="Number" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="house" TextWrapping="Wrap" Text="House" Width="75" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="hnmb" TextWrapping="Wrap" Text="Number" Width="75" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
-                <TextBox TextWrapping="Wrap" Text="City" Width="150" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="city" TextWrapping="Wrap" Text="City" Width="150" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
-                <TextBox TextWrapping="Wrap" Text="Zip-code" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="zipc" TextWrapping="Wrap" Text="Zip-code" Width="75" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" Margin="10,0,0,0" HorizontalAlignment="Left">
-                <CheckBox Content="Male " Width="65"/>
-                <CheckBox Content="Female " Width="70"/>
-                <CheckBox Content="Transsexual " Width="100"/>
+                <CheckBox x:Name="isMale" Content="Male " Width="65"/>
+                <CheckBox x:Name="isFemale" Content="Female " Width="70"/>
+                <CheckBox x:Name="isTrans" Content="Transsexual " Width="100"/>
 
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
-                <TextBox TextWrapping="Wrap" Text="Height" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
-                <TextBox TextWrapping="Wrap" Text="Weight" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="hght" TextWrapping="Wrap" Text="Height" Width="75" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="wgth" TextWrapping="Wrap" Text="Weight" Width="75" Height="20" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
-                <TextBox TextWrapping="Wrap" Text="Height" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
-                <TextBox TextWrapping="Wrap" Text="Weight" Width="75" Height="20" TextChanged="TextBox_TextChanged" Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="add" TextWrapping="Wrap" Text="Additional info" Width="150" Height="20"  Margin="10,0,0,30" VerticalAlignment="Bottom"/>
+
 
             </StackPanel>
-            
+            <StackPanel Orientation="Horizontal" Height="50" HorizontalAlignment="Left">
+                <Button x:Name="AddDB" Content="Add to database" Width="100" Height="25" Margin="10,0,0,0" Click="AddDB_Click"  />
+
+
+            </StackPanel>
         </StackPanel>
+
+        <DataGrid HorizontalAlignment="Left" x:FieldModifier="public" x:Name="MainData"  Background="Pink"  AutoGenerateColumns="False"  Width="530">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="categoryIdColumn" Binding="{Binding id}" 
+                                    Header="Identification Number" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding name}" 
+                                    Header="Name" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="surnameColumn" Binding="{Binding surname}" 
+                                    Header="Surname" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="strtnameColumn" Binding="{Binding street}" 
+                                    Header="Street Name" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="houseColumn" Binding="{Binding house}" 
+                                    Header="House" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="hnumberColumn" Binding="{Binding number}" 
+                                    Header="Number" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="cityColumn" Binding="{Binding city}" 
+                                    Header="City" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="zipColumn" Binding="{Binding zip}" 
+                                    Header="Zip-code" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="sexColumn" Binding="{Binding sex}" 
+                                    Header="Sex" Width="SizeToHeader"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
 
     </DockPanel>
 </Window>

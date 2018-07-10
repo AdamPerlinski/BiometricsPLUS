@@ -37,7 +37,6 @@ C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\bin\Debug\OxyPlot.pdb
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\bin\Debug\OxyPlot.xml
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\bin\Debug\OxyPlot.Wpf.pdb
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\bin\Debug\OxyPlot.Wpf.xml
-C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.csprojResolveAssemblyReference.cache
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\MainWindow.g.cs
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\App.g.cs
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -51,3 +50,15 @@ C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.csproj.
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.exe
 C:\Users\fokstrot1\source\repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.pdb
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.csprojAssemblyReference.cache
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.Initial.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.elo.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.eloo.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.elooo.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.eloooo.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.elooooo.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.eloooooi.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.eloooo1.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.eloooo2.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.eloooooooooooo.resources
+C:\Users\fokstrot1\Source\Repos\BiometricsPLUS\WpfApp2\obj\Debug\WpfApp2.Migrations.elo1.resources
